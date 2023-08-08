@@ -16,6 +16,8 @@ function Counter(props) {
     function reset() {
         setCountNum(0)
     }
+    const redOrGreen = countNum > 5 ? 'green' : 'red';
+
 
     return (
         <div className="counter">
@@ -23,7 +25,7 @@ function Counter(props) {
             {/* <h2>{props.what ? props.what : 'Label'}</h2> */}
             {/* naujausias budas, veikia su 0 skaiciu */}
             <h2>{props.what ?? 'Label'}</h2>
-            <p className="counterValue">{countNum}</p>
+            <p className={`${redOrGreen} counterValue`}>{countNum}</p>
             <Grid cols='3'>
                 <button onClick={goUp}>UP</button>
                 {countNum > 0 &&
