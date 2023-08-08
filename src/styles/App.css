@@ -8,5 +8,18 @@
 .grid {
   display: grid;
   gap: 16px;
-  /* grid-template-columns: repeat(1, 1fr); */
+  grid-template-columns: repeat(1, 1fr);
+}
+
+.counter {
+  border: 1px solid #000;
+  padding: 15px;
+  max-width: 300px;
+  text-align: center;
+}
+.counterValue {
+  font-size: 50px;
+  margin: 0;
+  margin-bottom: 0.2em;
+  font-weight: bold;
 }
