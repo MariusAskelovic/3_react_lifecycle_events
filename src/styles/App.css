@@ -1,3 +1,6 @@
+body {
+  background-color: rgb(174, 182, 182);
+}
 .card {
   border: 1px solid #000;
   padding: 15px;
@@ -29,4 +32,29 @@
 }
 .green {
   color: green;
+}
+.female {
+  color: rgb(255, 225, 0);
+  background-color: rgba(29, 22, 23, 0.331);
+}
+.male {
+  color: rgb(30, 0, 255);
+  background-color: rgba(69, 69, 181, 0.139);
+}
+
+.personCard {
+  border: 5px solid #000;
+  padding: 20px;
+}
+.personsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  text-align: center;
+}
+.normal {
+  border: 5px solid black;
+}
+.special {
+  border: 5px solid yellow;
 }
