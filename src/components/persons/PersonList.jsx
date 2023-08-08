@@ -5,6 +5,14 @@ function PersonList() {
     let howManyFemales = 0;
     personData.forEach((oneObj) => oneObj.gender === 'female' ? howManyFemales++ : '')
     const howMany37yoPlus = personData.filter((oneObj) => oneObj.age > 37)
+    const longestNamePerson = personData.reduce((longestNameObj, currentObj) => {
+        if (currentObj.name.length > longestNameObj.name.length) {
+            return currentObj;
+        } else {
+            return longestNameObj;
+        }
+    })
+    console.log('longestNamePerson ===', longestNamePerson);
     return (
         <div>
             <div className="personsGrid">
@@ -19,6 +27,7 @@ function PersonList() {
             <h4>There are {personData.length} persons</h4>
             <h4>There are {howManyFemales} females</h4>
             <h4>There are {howMany37yoPlus.length} persons older than 37yo</h4>
+            <h4>{longestNamePerson.name}</h4>
         </div>
     )
 }
