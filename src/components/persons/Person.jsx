@@ -6,15 +6,15 @@ function Person(props) {
     const [status, setStatus] = useState(false);
 
     function toggleStatus() {
-        setStatus(status === true ? false : true)
+        setStatus(status ? false : true)
     }
 
     return (
-        <div className={`${maleOrFemale} personCard ${status === true ? 'special' : ''}`}>
+        <div className={`${maleOrFemale} personCard ${status ? 'special' : ''}`}>
             <h3>Vardas: {props.name}</h3>
             <p>{props.name} yra {props.age} metu {lytis}</p>
             <p>Hobis: {props.hobby}</p>
-            <button onClick={toggleStatus}>{status === false ? 'Make Special' : 'Make Normal'}</button>
+            <button onClick={toggleStatus}>{status ? 'Make Normal' : 'Make Special'}</button>
         </div >
     )
 }

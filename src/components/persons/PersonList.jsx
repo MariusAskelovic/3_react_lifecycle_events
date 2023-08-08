@@ -3,6 +3,8 @@ import Person from "./Person";
 
 function PersonList() {
     let howManyFemales = 0;
+    personData.forEach((oneObj) => oneObj.gender === 'female' ? howManyFemales++ : '')
+    const howMany37yoPlus = personData.filter((oneObj) => oneObj.age > 37)
     return (
         <div>
             <div className="personsGrid">
@@ -13,10 +15,10 @@ function PersonList() {
                     gender={oneObj.gender}
                     hobby={oneObj.hobby}
                 />)}
-                {personData.map((oneObj) => oneObj.gender === 'female' ? howManyFemales++ : '')}
             </div>
-            <h3>There are {personData.length} persons</h3>
-            <h3>There are {howManyFemales} females</h3>
+            <h4>There are {personData.length} persons</h4>
+            <h4>There are {howManyFemales} females</h4>
+            <h4>There are {howMany37yoPlus.length} persons older than 37yo</h4>
         </div>
     )
 }
