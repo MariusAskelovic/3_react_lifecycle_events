@@ -8,6 +8,9 @@ function Counter(props) {
         setCountNum(countNum + 1)
     }
     function goDown() {
+        if (countNum < 1) {
+            return;
+        }
         setCountNum(countNum - 1)
     }
     function reset() {
@@ -23,8 +26,9 @@ function Counter(props) {
             <p className="counterValue">{countNum}</p>
             <Grid cols='3'>
                 <button onClick={goUp}>UP</button>
-                <button onClick={goDown}>DOWN</button>
-                <button onClick={reset}>Reset</button>
+                {countNum > 0 &&
+                    <button onClick={goDown}>DOWN</button>}
+                <button disabled={countNum === 0} onClick={reset}>Reset</button>
             </Grid>
         </div>
     )
