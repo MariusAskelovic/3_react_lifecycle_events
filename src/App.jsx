@@ -7,7 +7,7 @@ import PersonList from './components/persons/PersonList';
 
 function App() {
   return <div className="app">
-    <h1>Hello Vite</h1>
+    {/* <h1>Hello Vite</h1> */}
     {false && <CounterList />}
 
     {false && <CardList />}
