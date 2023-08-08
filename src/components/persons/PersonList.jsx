@@ -12,7 +12,10 @@ function PersonList() {
             return longestNameObj;
         }
     })
-    console.log('longestNamePerson ===', longestNamePerson);
+    const hobbies = personData.map((oneObj) => {
+        return oneObj.hobby;
+    }).join(', ')
+
     return (
         <div>
             <div className="personsGrid">
@@ -28,6 +31,7 @@ function PersonList() {
             <h4>There are {howManyFemales} females</h4>
             <h4>There are {howMany37yoPlus.length} persons older than 37yo</h4>
             <h4>{longestNamePerson.name}</h4>
+            <h4>Full hobbies list: {hobbies}</h4>
         </div>
     )
 }
