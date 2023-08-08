@@ -1,7 +1,7 @@
 import Grid from "../UI/Grid";
 import { useState } from 'react';
 
-function Counter() {
+function Counter(props) {
     console.log('<Counter generated />');
     const [countNum, setCountNum] = useState(0);
     function goUp() {
@@ -16,7 +16,10 @@ function Counter() {
 
     return (
         <div className="counter">
-            <h2>Label</h2>
+            {/* jei props.what nera tuscias, tada grazinam .what, kitaip 'Label' */}
+            {/* <h2>{props.what ? props.what : 'Label'}</h2> */}
+            {/* naujausias budas, veikia su 0 skaiciu */}
+            <h2>{props.what ?? 'Label'}</h2>
             <p className="counterValue">{countNum}</p>
             <Grid cols='3'>
                 <button onClick={goUp}>UP</button>

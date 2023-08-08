@@ -8,7 +8,7 @@ function App() {
   return <div className="app">
     <h1>Hello Vite</h1>
     {false && <CardList />}
-    <Counter />
+    <Counter what='Pushups' />
     <CounterList />
   </div>
 }
