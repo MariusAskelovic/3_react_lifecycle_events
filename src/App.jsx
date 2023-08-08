@@ -7,9 +7,9 @@ import CounterList from './components/counter/CounterList';
 function App() {
   return <div className="app">
     <h1>Hello Vite</h1>
-    {false && <CardList />}
-    <Counter what='Pushups' />
-    <CounterList />
+    {false && <CounterList />}
+
+    {true && <CardList />}
   </div>
 }
 
