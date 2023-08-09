@@ -14,7 +14,7 @@ function PersonList() {
     })
     const hobbies = personData.map((oneObj) => {
         return oneObj.hobby;
-    }).join(', ')
+    }).join(', ') + '.'
 
     return (
         <div>

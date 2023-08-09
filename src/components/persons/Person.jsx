@@ -6,7 +6,10 @@ function Person(props) {
     const [status, setStatus] = useState(false);
 
     function toggleStatus() {
-        setStatus(status ? false : true)
+        // setStatus(status ? false : true)
+        // !status visa laika apvercia
+        // jei true - bus false, jei false - bus true
+        setStatus(!status)
     }
 
     return (
